@@ -5,7 +5,7 @@ protocol ImageStackViewDelegate: class {
   func imageStackViewDidPress()
 }
 
-class ImageStackView: UIView {
+open class ImageStackView: UIView {
 
   struct Dimensions {
     static let imageSize: CGFloat = 58
@@ -47,7 +47,7 @@ class ImageStackView: UIView {
     views.first?.alpha = 1
   }
 
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 
@@ -74,7 +74,7 @@ class ImageStackView: UIView {
       object: nil)
   }
 
-  override func layoutSubviews() {
+  override open func layoutSubviews() {
     let step: CGFloat = -3.0
     let scale: CGFloat = 0.8
     let viewSize = CGSize(width: frame.width * scale,

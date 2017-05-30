@@ -44,7 +44,7 @@ open class BottomContainerView: UIView {
     return button
     }()
 
-  lazy var stackView = ImageStackView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+  open lazy var stackView = ImageStackView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
 
   lazy var topSeparator: UIView = { [unowned self] in
     let view = UIView()
